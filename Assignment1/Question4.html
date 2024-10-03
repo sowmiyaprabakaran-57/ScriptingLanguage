@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        /* Basic styling for the image gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 200px;
+            margin: 10px;
+            opacity: 0.6; /* Default low opacity */
+            transition: transform 0.5s; /* Smooth scale animation */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            // Animate the opacity and highlight the image on button click
+            $("button").click(function(){
+                $(".gallery img").fadeTo(1000, 1); // Fade in smoothly to full opacity
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h2>Design Portfolio</h2>
+
+    <!-- Image Gallery Section -->
+    <div class="gallery">
+        <img src="https://via.placeholder.com/200" alt="Image 1">
+        <img src="https://via.placeholder.com/200" alt="Image 2">
+        <img src="https://via.placeholder.com/200" alt="Image 3">
+        <img src="https://via.placeholder.com/200" alt="Image 4">
+    </div>
+
+    <!-- Button to trigger the animation -->
+    <button>Highlight Images</button>
+
+</body>
+</html>
